@@ -3,7 +3,7 @@
 public class SplitTemporaryVariable : MonoBehaviour
 {
 	[SerializeField] private float speed = 5f;
-	[SerializeField] private Rigidbody rigidbody;
+	[SerializeField] private Rigidbody setRigidbody;
 
 	private void Update()
 	{
@@ -16,6 +16,6 @@ public class SplitTemporaryVariable : MonoBehaviour
 		velocityAxis = Input.GetAxis("Horizontal");
 		velocity.x = velocityAxis;
 
-		rigidbody.velocity = velocity * speed;
+		setRigidbody.velocity = velocity * speed * Time.deltaTime;
 	}
 }
