@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using UnityEngine;
 
 public class SeasonCharge : MonoBehaviour
@@ -18,7 +18,7 @@ public class SeasonCharge : MonoBehaviour
 	{
 		DateTime currentDate = DateTime.Now;
 		int month = currentDate.Month;
-		Debug.Log("¡‚Í" + month + "ŒŽ");
+		Debug.Log("ä»Šã¯" + month + "æœˆ");
 
 		int charge = 0;
 		if (month >= summerStartMonth && month <= summerEndMonth)
@@ -31,6 +31,6 @@ public class SeasonCharge : MonoBehaviour
 			charge = Mathf.CeilToInt(quantity * winterRate) + winterServiceCharge;
 		}
 
-		Debug.Log("’l’i‚Í" + charge + "ŒŽ");
+		Debug.Log("å€¤æ®µã¯" + charge + "æœˆ");
 	}
 }
